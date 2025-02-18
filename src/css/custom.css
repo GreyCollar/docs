@@ -1,0 +1,119 @@
+html[data-theme="dark"] {
+  --ifm-color-primary: #00a76f;
+  --ifm-color-primary-dark: #007867;
+  --ifm-color-primary-darker: #004b50;
+  --ifm-color-primary-darkest: #003768;
+  --ifm-color-primary-light: #5be49b;
+  --ifm-color-primary-lighter: #c8fad6;
+  --ifm-color-primary-lightest: #cafdf5;
+  --ifm-background-color: #1c2128;
+  --ifm-background-surface-color: #22272e;
+  --ifm-color-content: #ffffff;
+  --ifm-color-content-secondary: #adbac7;
+  --ifm-navbar-background-color: #22272e;
+  --ifm-footer-background-color: #22272e;
+  --ifm-footer-color: #a9a9a9;
+  --ifm-footer-link-color: #ffffff;
+}
+
+:root {
+  --ifm-font-family-base: Roboto;
+  --ifm-navbar-background-color: #323a40;
+  --ifm-footer-background-color: #343e48;
+  --ifm-footer-color: #a9a9a9;
+  --ifm-footer-link-color: #ffffff;
+}
+
+.footer {
+  color: var(--ifm-footer-color);
+  font-size: 16px;
+  padding: 16px;
+  background-color: var(--ifm-footer-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-icon-button {
+  fill: var(--ifm-footer-link-color);
+}
+.navbar {
+  background: var(--ifm-navbar-background-color);
+}
+
+.navbar-sidebar {
+  background: #323a40;
+}
+
+.navbar__item {
+  color: #9a9da0;
+  font-size: 14px;
+}
+
+th {
+  min-width: 100px;
+}
+
+span.github {
+  color: white;
+}
+
+.navbar__toggle {
+  color: #9a9da0;
+}
+
+.navbar-sidebar__back {
+  color: #9a9da0;
+}
+
+.ide-button {
+  padding: 6px 20px;
+  border-radius: 5px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 141, 114, 1) 0%,
+    rgba(32, 153, 88, 1) 100%
+  );
+}
+
+.ide-button-text {
+  color: white;
+}
+
+.neon {
+  display: inline;
+  color: #fff;
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #0fa;
+  animation: flicker 60s infinite alternate;
+  font-size: 12px;
+}
+
+@keyframes flicker {
+  0%,
+  50%,
+  50.2%,
+  50.4%,
+  53.2%,
+  53.4%,
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #0fa;
+  }
+  50.1%,
+  50.3%,
+  53.3% {
+    text-shadow: none;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 996px) {
+  div.navbar__items.navbar__items--right > * {
+    display: block;
+    position: inherit;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 996px) {
+  div.ide-button {
+    display: none;
+  }
+}

@@ -1,0 +1,9 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    uses: NucleoidAI/actions/.github/workflows/deploy.yml@main
+    secrets: inherit
+
