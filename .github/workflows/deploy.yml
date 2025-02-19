@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: canmingir/greycollar-docs-live:${{env.TAG}}
+          tags: canmingir/greycollar-docs-live:${{ github.run_id }}
           context: .
 
       - name: Azure Login
@@ -45,7 +45,7 @@ jobs:
           registryPassword: ${{ secrets.DOCKER_ACCESS_TOKEN }}
           containerAppName: greycollar-docs-live
           resourceGroup: NucGroup
-          imageToDeploy: registry.hub.docker.com/canmingir/greycollar-docs:live-${{ github.run_id }}
+          imageToDeploy: registry.hub.docker.com/canmingir/greycollar-docs-live:${{ github.run_id }}
           targetPort: 3000
           ingress: 'external'
 
