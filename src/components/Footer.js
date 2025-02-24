@@ -11,7 +11,7 @@ function Footer() {
     <footer>
       <Box className={"footer"}>
         <WeekCalendar />
-        Nucleoid
+        GreyCollar
         <Box>
           <IconButton
             onClick={() =>
@@ -27,7 +27,7 @@ function Footer() {
           </IconButton>
           <IconButton
             onClick={() =>
-              window.open("https://github.com/NucleoidAI/Nucleoid", "_blank")
+              window.open("https://github.com/greycollar/greycollar", "_blank")
             }
           >
             <GitHubIcon style={{ fill: "#ffffff" }} />

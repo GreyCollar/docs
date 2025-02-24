@@ -1,4 +1,4 @@
-if (window.location.hostname !== "nucleoid.com") {
+if (window.location.hostname !== "greycollar.ai") {
   window["ga-disable-G-L9H12K94J4"] = true;
 }
 

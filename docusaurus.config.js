@@ -3,15 +3,15 @@ const darkCodeTheme = require("prism-react-renderer/themes/vsDark");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Nucleoid",
-  tagline: "Neuro-Symbolic AI with Logic Graph",
-  url: "https://nucleoid.com/",
+  title: "GreyCollar",
+  tagline: "Supervised AI Agent",
+  url: "https://greycollar.ai/",
   baseUrl: "/docs/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "https://cdn.nucleoid.com/media/icon.png",
-  organizationName: "NucleoidAI",
-  projectName: "Nucleoid",
+  favicon: "https://cdn.nucleoid.com/greycollar/media/icon.png",
+  organizationName: "greycollar",
+  projectName: "GreyCollar",
   titleDelimiter: "-",
   i18n: {
     defaultLocale: "en",
@@ -35,9 +35,13 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/NucleoidAI/docs/tree/main/",
+          editUrl: "https://github.com/greycollar/docs/tree/main",
         },
-        blog: false,
+        blog: {
+          showReadingTime: true,
+          editUrl:
+            'https://github.com/greycollar/docs/tree/main',
+        },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -59,17 +63,17 @@ const config = {
           { to: "/docs/learn", label: "LEARN", position: "left" },
           { to: "/docs/api", label: "API", position: "left" },
           {
-            to: "https://nucleoid.com/blog",
+            to: "/blog",
             label: "BLOG",
             position: "left",
           },
           {
-            href: "https://nucleoid.com/ide/chat",
+            href: "https://land.greycollar.ai",
             html: require("fs").readFileSync("./ide.html", "utf8"),
             position: "right",
           },
           {
-            href: "https://github.com/NucleoidAI/Nucleoid",
+            href: "https://github.com/greycollar/greycollar",
             html: require("fs").readFileSync("./github.html", "utf8"),
             position: "right",
           },

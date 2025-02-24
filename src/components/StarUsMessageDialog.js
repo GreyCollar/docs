@@ -26,7 +26,7 @@ const StarUsMessageDialog = () => {
       page_location: window.location.href,
       page_path: window.location.pathname,
     });
-    window.open("https://github.com/NucleoidAI/Nucleoid", "_blank");
+    window.open("https://github.com/greycollar/greycollar", "_blank");
   };
 
   if (!open) {
@@ -87,10 +87,8 @@ const StarUsMessageDialog = () => {
           }}
         >
           <span style={{ fontSize: 14 }}>
-            &emsp;Thanks to declarative programming, we have a brand-new
-            approach to data and logic. As we are still discovering what we can
-            do with this powerful programming model, please join us with any
-            types of contribution!
+            &emsp;Thanks to supervising learning, we have a brand-new approach
+            to AI Agents. Join us in shaping the future of AI!
           </span>
           <img
             src={"https://cdn.nucleoid.com/media/nobel.png"}
