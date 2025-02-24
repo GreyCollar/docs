@@ -5,92 +5,58 @@ description: Get started with Nucleoid, a declarative, logic-based runtime desig
 
 # Get Started
 
-[![npm](https://img.shields.io/npm/v/nucleoidai)](https://www.npmjs.com/package/nucleoidai) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/nucleoidai/nucleoid/test.yml?branch=main)](https://github.com/NucleoidAI/Nucleoid/actions/workflows/test.yml)
+Welcome to GreyCollar, a supervised AI Agent framework designed for seamless human-AI collaboration through autonomous
+workflows, human-in-the-loop processes, asynchronous communication, and open-ended task execution. This guide will help
+you set up and run the project using TypeScript and npm.
 
-Nucleoid is a declarative, logic-based runtime designed for Neuro-Symbolic AI, focusing on adaptive reasoning and explainability through the Logic Graph. This runtime environment allows for dynamic relationship mapping between logic and data, supporting both intuitive and rational decision-making processes. Nucleoid runtime integrates neural networks for pattern learning with symbolic AI for logical reasoning, enhancing system interpretability and reliability.
+## Prerequisites
 
-## Hello World
+Before getting started, make sure the following are installed:
 
-import ReactPlayer from "react-player";
+- Node.js (v14 or higher) – Download [Node.js](https://nodejs.org)
+- npm – Comes bundled with Node.js
+- TypeScript – Globally installed for development
 
-<p align="center">
-  <ReactPlayer
-    width={"100%"}
-    height={"100%"}
-    controls
-    url={
-      "https://cdn.nucleoid.com/media/4f509622-3739-4dd1-84ef-8b27116529c0.mp4"
-    }
-  />
-</p>
+Install TypeScript globally if not already installed:
+
+```bash
+npm install -g typescript
+```
 
 ## Installation
 
-```shell
-> npx nucleoidai start
+1. Clone the Repository
+
+```bash
+git clone https://github.com/greycollar/greycollar.git
+cd greycollar
 ```
 
-![Terminal Start](/media/terminal-start.png)
+2. Install Dependencies
 
-> :bulb: Nucleoid runtime can also run on local machine with `npx @nucleoidai/ide start` and `npx @nucleoidai/expert start` including [Nucleoid Chat](https://nucleoid.com/ide/chat). These commands enable IDE and expert system components needed for Neuro-Symbolic AI.
+Run the following command to install all required packages:
 
-### Terminal
-
-Terminal runs on port `8448` by default. Send `POST` to `http://localhost:8448` with `Content-Type: application/javascript`:
-
-![Terminal Start](/media/terminal-postman.png)
-
-### IDE
-
-Queries also can be made through open-source [IDE](https://github.com/NucleoidAI/IDE) as the runtime running locally:
-
-![Terminal Start](/media/terminal-ide.png)
-
-## Library
-
-Once included in the project, you can initialize as:
-
-```javascript
-const nucleoid = require("nucleoidai");
-const app = nucleoid();
+```bash
+npm install
 ```
 
-Now, you can tie your business logic to API
+3. Set Up Environment Variables
 
-```javascript
-class Item {
-  constructor(name, barcode) {
-    this.name = name;
-    this.barcode = barcode;
-  }
-}
-nucleoid.register(Item);
+Create a .env file in the root directory and define the necessary environment variables.
 
-// > Create an item with given name and barcode, but the barcode must be unique
-app.post("/items", (req) => {
-  const name = req.body.name;
-  const barcode = req.body.barcode;
+4. Start the Application
 
-  const check = Item.find((i) => i.barcode === barcode);
-
-  if (check) {
-    throw "DUPLICATE_BARCODE";
-  }
-
-  return new Item(name, barcode);
-});
+```bash
+npm run dev
 ```
 
-That is all you need :heart:
+or you can start individual components:
 
-> Nucleoid runtime builds an execution plan based on the dependencies in your business logic and stores each transaction in the built-in data store.
-
-<p align="center">
-  <img src="https://cdn.nucleoid.com/media/graph.png" width="500"/>
-</p>
-
-In final step, start the app with a port number:
-
-```javascript
-app.listen(3000);
+```bash
+npm run dev:api
+npm run dev:dashboard
+npm run dev:main
 ```
+
+This will start three applications simultaneously: Dashboard, API Server and Proxy Server. Once started, the dashboard
+should be accessible in your browser at http://localhost:3000
