@@ -26,7 +26,7 @@ import ReactPlayer from "react-player";
 </p>
 
 
-## Teams
+## [Teams](/docs/features/teams)
 
 Organize your work efficiently by creating and managing teams. Our platform allows you to build structured groups for
 better collaboration and workflow management. Each team space is customizable, enabling tailored access levels, roles,
@@ -40,7 +40,7 @@ Additionally, team administrators can monitor participation and activity levels,
 productivity. By providing analytical tools and performance insights, our platform empowers team leaders to make
 informed decisions.
 
-## Colleagues
+## [Colleagues](/docs/features/colleagues)
 
 Stay connected with your colleagues and build a strong network within your organization. Our platform makes it easy to
 add and manage professional connections. Each colleague profile displays key details such as availability, expertise,
@@ -53,7 +53,7 @@ The platform supports status updates, making it easy to see when a colleague is 
 for birthdays, achievements, and work anniversaries add a personal touch and strengthen relationships among team
 members.
 
-## Async Chat
+## [Async Chat](/docs/features/async-chat)
 
 Communicate effectively across time zones with our powerful async chat feature. Unlike real-time messaging, async chat
 allows users to leave messages that team members can respond to at their convenience. This feature is ideal for
@@ -66,7 +66,7 @@ information.
 You can share files, links, and documents directly within chats, streamlining project collaboration. Notifications
 ensure that users stay informed about relevant updates, without the pressure of immediate response.
 
-## Task Management
+## [Task Execution](/docs/features/task-execution)
 
 Streamline task assignment, tracking, and completion with our intuitive task management feature. Create tasks, assign
 them to team members, set due dates, and monitor progress in real-time. The platform offers customizable task views,
