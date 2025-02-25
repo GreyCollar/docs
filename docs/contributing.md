@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 description: Get started with GreyCollar, a supervised AI Agent framework designed for seamless human-AI collaboration through autonomous workflows, human-in-the-loop processes, asynchronous communication, and open-ended task execution.
 ---
 
