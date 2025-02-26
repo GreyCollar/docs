@@ -105,7 +105,7 @@ span.github {
   }
 }
 
-@media (min-width: 360px) and (max-width: 996px) {
+@media (min-width: 450px) and (max-width: 996px) {
   div.navbar__items.navbar__items--right > * {
     display: block;
     position: inherit;
