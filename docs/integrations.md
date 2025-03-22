@@ -81,14 +81,14 @@ Use the credentials in your frontend or backend, depending on the flow:
 
 ## Zapier Integration
 
-#### Prerequisites
+#### **1. Prerequisites**
 
 - A Zapier account: [Sign up here](https://zapier.com/app/signup)
 - A stable API (REST or GraphQL)
 - Auth mechanism: API Key, OAuth2, or Session Auth
 - Basic knowledge of JavaScript and APIs
 
-#### ⚙️ Steps to Build a Zapier Integration
+#### **2. Steps to Build a Zapier Integration**
 
 1. **Create a New Integration**
 
@@ -130,3 +130,60 @@ Use the credentials in your frontend or backend, depending on the flow:
    - Use Private invite-only link to share with testers
    - Submit for Zapier public review if you want to publish your app
    - 📌 Zapier will review functionality, authentication, and UX
+
+## Whatsapp Business Integration
+
+### **1. Choose the Right WhatsApp Business Platform**
+
+There are two main ways to integrate with WhatsApp:
+
+#### a) **WhatsApp Business App (Simple Use)**
+
+- Best for small businesses with low automation needs.
+- Limited automation (Quick Replies, Labels, Broadcasts).
+- No API access, manual usage via mobile or WhatsApp Web.
+
+#### b) **WhatsApp Business API (Advanced Use)**
+
+- Ideal for medium to large-scale businesses.
+- Allows automation, integration with CRMs, chatbots, etc.
+- Requires approval and a verified Facebook Business Account.
+- Can be accessed via:
+  - **Meta’s Cloud API** (recommended for most new users)
+  - **Third-party providers** like Twilio, 360dialog, Vonage, etc.
+
+---
+
+### **2. Steps to Integrate with WhatsApp Business API**
+
+#### **1. Set Up a Facebook Business Account**
+
+- Go to [Facebook Business Manager](https://business.facebook.com/)
+- Verify your business details.
+
+#### **2. Apply for WhatsApp Business API**
+
+- Use Meta’s [WhatsApp Business Platform](https://www.facebook.com/business/help/325365696252153)
+- Or register through a **Business Solution Provider** (BSP)
+
+#### **3. Create a WhatsApp Business Profile**
+
+- Phone number (can’t be tied to a regular WhatsApp account)
+- Display name, business category, description
+
+#### **4. Choose an Integration Method**
+
+- **Meta Cloud API** (free for developers, scalable)
+- **Third-party BSPs** like Twilio or 360dialog (easier onboarding)
+
+#### **5. Build Your Integration**
+
+- Use the WhatsApp Cloud API endpoint
+- Set up a Webhook URL to receive messages
+- Authenticate via access tokens
+- Send and receive messages using HTTP requests (REST API)
+
+#### **6. Template Messages**
+
+- Use approved message templates for outbound messages
+- Useful for order confirmations, appointment reminders, etc.
