@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 description: Get started with GreyCollar, a supervised AI Agent framework designed for seamless human-AI collaboration through autonomous workflows, human-in-the-loop processes, asynchronous communication, and open-ended task execution.
 ---
 
@@ -10,6 +10,7 @@ Thank you for considering contributing to **GreyCollar**! We welcome contributio
 ## How to Contribute
 
 ### 1. Fork the Repository
+
 - Click the **Fork** button at the top right of this page.
 - Clone your fork locally:
   ```bash
@@ -18,6 +19,7 @@ Thank you for considering contributing to **GreyCollar**! We welcome contributio
   ```
 
 ### 2. Set Up Your Development Environment
+
 - Install dependencies:
   ```bash
   npm install
@@ -28,12 +30,14 @@ Thank you for considering contributing to **GreyCollar**! We welcome contributio
   ```
 
 ### 3. Create a Branch for Your Changes
+
 - Use a descriptive branch name:
   ```bash
   git checkout -b your-feature-name
   ```
 
 ### 4. Make Your Changes
+
 - Follow our coding standards (TypeScript best practices).
 - Run tests before committing:
   ```bash
@@ -41,6 +45,7 @@ Thank you for considering contributing to **GreyCollar**! We welcome contributio
   ```
 
 ### 5. Commit Your Changes
+
 - Write clear, concise commit messages:
   ```bash
   git add .
@@ -48,6 +53,7 @@ Thank you for considering contributing to **GreyCollar**! We welcome contributio
   ```
 
 ### 6. Push and Create a Pull Request
+
 - Push your branch:
   ```bash
   git push origin feature/your-feature-name
@@ -56,6 +62,7 @@ Thank you for considering contributing to **GreyCollar**! We welcome contributio
   [Create a Pull Request](https://github.com/greycollar/greycollar/pulls)
 
 ## Code Style Guide
+
 - Use TypeScript (strict typing).
 - Follow existing project structure and naming conventions.
 - Run ESLint to check code formatting:
@@ -64,19 +71,23 @@ Thank you for considering contributing to **GreyCollar**! We welcome contributio
   ```
 
 ## Pull Request Checklist
+
 Before submitting your PR, ensure:
+
 - [ ] Your code passes all tests.
 - [ ] You have updated documentation as needed.
 - [ ] You have followed the coding standards.
 
 ## Reporting Issues
+
 - Check for existing issues before creating a new one.
 - Provide a clear description, steps to reproduce, and screenshots if possible.
 - Submit issues here: [GreyCollar Issues](https://github.com/greycollar/greycollar/issues)
 
 ## Code of Conduct
+
 By participating in this project, you agree to abide by our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Thank You
-Thank you for helping make **GreyCollar** better for everyone!
 
+Thank you for helping make **GreyCollar** better for everyone!
