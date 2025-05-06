@@ -63,7 +63,7 @@ const config = {
           { to: "/docs/learn", label: "LEARN", position: "left" },
           { to: "/docs/api", label: "API", position: "left" },
           {
-            to: "/blog",
+            to: "https://dev.to/greycollarai",
             label: "BLOG",
             position: "left",
           },
