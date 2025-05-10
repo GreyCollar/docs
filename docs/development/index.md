@@ -8,36 +8,47 @@ description: GreyCollar Development
 
 ![Supervised Agentic AI Platform](/media/supervised-agentic-ai-platform.png)
 
-Supervised Agentic AI Platform is a platform that allows you to create and manage AI agents. It provides a set of tools and features to help you build, deploy, and monitor your AI agents. The platform is designed to be user-friendly and accessible to both technical and non-technical users.
+Supervised Agentic AI Platform is a human-in-the-loop system that uses supervised learning to guide and continuously train AI agents to perform day-to-day tasks in the workplace.
 
-#### Human-in-the-loop
+- **Human-in-the-loop**: Integrates human supervision into the AI loop for quality control, decision validation, and ongoing improvement.
+- **Supervised Learning:** Trains AI agents using labeled examples and human-validated outputs to accurately complete assigned tasks.
+- **Autonomous Workflow:** Supports intelligent task composition, allowing agents to break down goals into manageable actions and complete them end-to-end.
 
-Supervised Agentic AI Platform is a human-in-the-loop platform that allows you to create and manage AI agents. It provides a set of tools and features to help you build, deploy, and monitor your AI agents. The platform is designed to be user-friendly and accessible to both technical and non-technical users.
+### MCP Layer
 
-#### What is Supervised Learning?
+MCP standardizes the way applications deliver relevant context to LLMs, facilitating smarter and more adaptable agents. The platform is built on top of the MCP layer, which is designed to be modular and extensible, allowing for easy integration with other applications and services.
 
-Supervised learning is a type of machine learning where the model is trained on a labeled dataset. The model learns to make predictions based on the input data and the corresponding output labels. In the context of GreyCollar, supervised learning is used to train AI agents to perform specific tasks based on the knowledge and responsibilities defined in the system.
+![MCP Layer](/media/mcp.png)
 
-### MCP
+- **Modular and Extensible:** The MCP layer is designed to be modular and extensible, allowing for easy integration with other applications and services.
+- **Standardized Context Delivery:** The MCP layer standardizes the way applications deliver relevant context to LLMs, facilitating smarter and more adaptable agents.
+- **Real-time Communication:** The MCP layer enables real-time communication and interaction between different agents and services, allowing for seamless data exchange and functionality.
 
-The platform is built on MCP protocol, which is a lightweight and efficient protocol for communication between AI agents. It allows for seamless data exchange and functionality between different agents and services.
+### Event Layer
 
-### Event-drive Architecture
+GreyCollar adopts Event-Driven Architecture (EDA), which enables asynchronous communication by allowing systems to emit signals and others to act on them.
 
-EDA is the key component of the platform. It allows for real-time communication and interaction between different agents and services. The event-driven architecture enables the platform to be highly scalable and flexible, allowing for easy integration with other applications and services.
+- **Asynchronous Communication:** Event-driven architecture enables asynchronous communication between different components of the system, allowing for more efficient and responsive interactions.
+- **Flexibility:** The event-driven architecture allows for easy integration with other systems and services, making it easier to adapt to changing requirements and needs.
+- **Real-time Processing:** The event-driven architecture allows for real-time processing of events, enabling faster response times and improved user experience.
 
-### Reactive Functions
+### Reactive Functions Layer
 
-Nano-services inspired by reactive functions are the building blocks of the platform. They are small, self-contained functions that can be easily combined to create complex workflows and processes. The reactive functions are designed to be modular and reusable, allowing for easy integration with other services and applications.
+Reactive functions are part of reactive programming and work alongside the event layer to provide a reactive programming model. This allows for the creation of functions that respond to events and changes in the system.
 
-### Communication
+### Communication Layer
 
-The platform provides a set of communication channels to interact with the AI agents. These channels include chat, email, and other forms of communication. The communication channels are designed to be user-friendly and accessible to both technical and non-technical users.
+Communication layer is the interface for agentic AI to interact with the outside world. Differences between the communication layer and the MCP layer are:
+
+- **MCP Layer**: The MCP layer provides integrations to 3rd party applications and services in part of task execution.
+- **Communication Layer**: The communication layer is the interface for agentic AI to interact with the outside world.
+
+---
 
 ## Entities
 ![Entities](/media/entities.png)
 
-### Colleague (AI)
+### [Colleague (AI)](colleague)
 
 Colleague is the AI assistant that helps you with your tasks based on responsibilities and knowledge.
 
