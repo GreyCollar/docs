@@ -14,7 +14,7 @@ Thank you for considering contributing to **GreyCollar**! We welcome contributio
 - Click the **Fork** button at the top right of this page.
 - Clone your fork locally:
   ```bash
-  git clone https://github.com/greycollar/greycollar.git
+  git clone https://github.com/GreyCollar/GreyCollar.git
   cd greycollar
   ```
 
@@ -59,7 +59,7 @@ Thank you for considering contributing to **GreyCollar**! We welcome contributio
   git push origin feature/your-feature-name
   ```
 - Open a Pull Request (PR) on GitHub and fill in the template:
-  [Create a Pull Request](https://github.com/greycollar/greycollar/pulls)
+  [Create a Pull Request](https://github.com/GreyCollar/GreyCollar/pulls)
 
 ## Code Style Guide
 
@@ -82,7 +82,7 @@ Before submitting your PR, ensure:
 
 - Check for existing issues before creating a new one.
 - Provide a clear description, steps to reproduce, and screenshots if possible.
-- Submit issues here: [GreyCollar Issues](https://github.com/greycollar/greycollar/issues)
+- Submit issues here: [GreyCollar Issues](https://github.com/GreyCollar/GreyCollar/issues)
 
 ## Code of Conduct
 

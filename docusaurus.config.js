@@ -73,7 +73,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://github.com/greycollar/greycollar",
+            href: "https://github.com/GreyCollar/GreyCollar",
             html: require("fs").readFileSync("./github.html", "utf8"),
             position: "right",
           },

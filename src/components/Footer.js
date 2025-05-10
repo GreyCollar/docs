@@ -27,7 +27,7 @@ function Footer() {
           </IconButton>
           <IconButton
             onClick={() =>
-              window.open("https://github.com/greycollar/greycollar", "_blank")
+              window.open("https://github.com/GreyCollar/GreyCollar", "_blank")
             }
           >
             <GitHubIcon style={{ fill: "#ffffff" }} />

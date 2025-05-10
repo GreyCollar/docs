@@ -28,7 +28,7 @@ npm install -g typescript
 1. Clone the Repository
 
 ```bash
-git clone https://github.com/greycollar/greycollar.git
+git clone https://github.com/GreyCollar/GreyCollar.git
 cd greycollar
 ```
 
