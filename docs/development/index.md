@@ -36,6 +36,8 @@ GreyCollar adopts Event-Driven Architecture (EDA), which enables asynchronous co
 
 Reactive functions are part of reactive programming and work alongside the event layer to provide a reactive programming model. This allows for the creation of functions that respond to events and changes in the system.
 
+![Reactive Functions Layer](/media/reactive-programming.png)
+
 ### Communication Layer
 
 Communication layer is the interface for agentic AI to interact with the outside world. Differences between the communication layer and the MCP layer are:
