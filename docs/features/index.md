@@ -25,69 +25,60 @@ import ReactPlayer from "react-player";
   />
 </p>
 
+## [Colleague (AI)](/docs/features/colleague)
+![Colleague Page](/media/profile.png)
 
-## [Teams](/docs/features/teams)
+Colleagues are AI assistants that help you with your tasks based on responsibilities and knowledge. They are designed to:
 
-Organize your work efficiently by creating and managing teams. Our platform allows you to build structured groups for
-better collaboration and workflow management. Each team space is customizable, enabling tailored access levels, roles,
-and permissions. This flexibility ensures that all members have the necessary tools and information for their roles.
+- Complete tasks standalone for given responsibilities
+- Continuously learn and persist to knowledge base
+- Collaborate with other human supervisors or human colleagues
 
-Teams can also share resources like files, documents, and project updates within a centralized space. This central hub
-makes it easier to track project milestones, assign tasks, and monitor progress. Notifications and alerts keep everyone
-on the same page, promoting transparency and accountability.
+## [Knowledge](/docs/features/knowledge)
 
-Additionally, team administrators can monitor participation and activity levels, helping foster engagement and
-productivity. By providing analytical tools and performance insights, our platform empowers team leaders to make
-informed decisions.
+![Knowledge Base](/media/knowledge-base.png)
 
-## [Colleagues](/docs/features/colleagues)
+Knowledge is the information that the AI uses when working on responsibilities. It can be in the form of documents, FAQs, or any other.
 
-Stay connected with your colleagues and build a strong network within your organization. Our platform makes it easy to
-add and manage professional connections. Each colleague profile displays key details such as availability, expertise,
-and current projects, encouraging collaboration based on skills and mutual interests.
+> Knowledge can be added manually or part of the supervising process during task execution.
 
-Advanced search and filtering options allow users to find the right colleague for specific tasks or discussions. You can
-also create groups based on departments, interests, or projects to streamline communication and foster teamwork.
+## [Responsibility and Task](/docs/features/responsibility)
 
-The platform supports status updates, making it easy to see when a colleague is available for discussion. Notifications
-for birthdays, achievements, and work anniversaries add a personal touch and strengthen relationships among team
-members.
+![Responsibility](/media/responsibility.png)
 
-## [Async Chat](/docs/features/async-chat)
+Responsibility is a blueprint of the tasks that the AI will perform based on knowledge. It defines what the AI can do and how it can help you.
 
-Communicate effectively across time zones with our powerful async chat feature. Unlike real-time messaging, async chat
-allows users to leave messages that team members can respond to at their convenience. This feature is ideal for
-distributed teams working across different schedules.
+> Tasks are the actions that the AI performs for a given responsibility with knowledge. Once the task is initiated through communication, the AI will execute the task and provide feedback to the supervisor.
 
-Threads help organize discussions around specific topics or tasks, ensuring that important conversations are easy to
-follow. The platform also offers message pinning, tagging, and search functionality for easy access to essential
-information.
+## [Supervising (Human)](/docs/features/supervising)
+![Supervising](/media/supervising.png)
 
-You can share files, links, and documents directly within chats, streamlining project collaboration. Notifications
-ensure that users stay informed about relevant updates, without the pressure of immediate response.
+Supervising by human is raised when the AI is not able to complete the task or needs human input. The supervisor can provide feedback, ask questions, or give additional information to help the AI complete the task.
 
-## [Task Execution](/docs/features/task-execution)
+> :warning: This is the core concept to eliminate hallucination that the AI evaluates knowledge existed before the execution of the task.
 
-Streamline task assignment, tracking, and completion with our intuitive task management feature. Create tasks, assign
-them to team members, set due dates, and monitor progress in real-time. The platform offers customizable task views,
-filters, and sorting options to help you stay organized and focused.
+## [Team](/docs/features/team)
 
-Task dependencies and subtasks allow you to break down complex projects into manageable steps. Notifications keep team
-members informed about task updates, deadlines, and assignments. With task comments and attachments, you can provide
-context, feedback, and additional resources to ensure successful task completion.
+![Team](/media/team.png)
 
-## File Sharing
+Team is a logical grouping of AI colleagues. Mainly this grouping provides 2 major benefits:
 
-Simplify collaboration and document management with our secure file sharing feature. Upload, store, and share files
-within team spaces, projects, or chat conversations. The platform supports a wide range of file formats, including
-documents, images, videos, and more.
+- **Knowledge Management**: Knowledge can be shared between AI colleagues within the team, while each colleague can also maintain their own individual knowledge. In agentic AI, effective knowledge management is crucial to eliminate hallucinations, ensuring that each AI colleague has sufficient knowledge to complete tasks without being misled by irrelevant or unnecessary information. a
+- **Team Lead**: The team lead is the person responsible for handing off the task to the AI colleagues.
 
-Version control and file history tracking ensure that you always have access to the latest updates and revisions.
-Granular permissions and access controls allow you to manage file sharing settings and restrict access as needed. File
-previews, comments, and annotations facilitate feedback and collaboration on shared documents.
+## [Communication](/docs/features/communication)
 
-## Notifications
+![Communication](/media/communication.png)
 
-Stay informed and engaged with our comprehensive notification system. Receive real-time updates on project activities,
-task assignments, chat messages, and more. Customizable notification settings enable you to choose the types of alerts
-you want to receive and how you want to be notified.
+Communication is the primary way to interact with AI colleagues. It can occur through various channels, such as chat, email, or voice, depending on the context and user preferences. These communication channels are linked to specific responsibilities that AI colleagues are capable of handling, ensuring interactions are efficient and task-relevant. Multiple channels can be used simultaneously, allowing for flexibility in how users engage with AI colleagues.
+
+> In short, communication opens up AI colleagues to the outside world, enabling them to perform tasks.
+
+## [Integration](/docs/features/integration)
+
+![Integration](/media/integration.png)
+
+All integrations are based on MCP that allows you to connect to any third-party service. The integration can be used for bidirectional communication:
+
+- Incoming: Pulling data such as reading from Google Drive or checking Google Calendar 
+- Outgoing: Sending data such as writing to Google Drive or posting to a Slack channel
