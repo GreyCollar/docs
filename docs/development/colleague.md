@@ -8,7 +8,7 @@ Colleague is the AI assistant that helps you with your tasks based on responsibi
 ## Model
 
 | Name       | Type     |
-|------------|----------|
+| ---------- | -------- |
 | id         | UUID     |
 | name       | string   |
 | avatar     | string   |
@@ -44,4 +44,53 @@ Response:
   "teamId": "UUID",
   "aiEngineId": "UUID"
 }
+```
+
+```
+GET /colleagues
+
+Response:
+{
+  "id": "UUID",
+  "name": "string",
+  "avatar": "string",
+  "character": "string",
+  "title": "string",
+  "role": "string",
+  "teamId": "UUID",
+  "aiEngineId": "UUID"
+}
+```
+
+```
+PUT /colleagues/{id}
+
+{
+  "name": "string",
+  "avatar": "string",
+  "character": "string",
+  "title": "string",
+  "role": "string",
+  "teamId": "UUID",
+  "aiEngineId": "UUID"
+}
+
+Response:
+{
+  "id": "UUID",
+  "name": "string",
+  "avatar": "string",
+  "character": "string",
+  "title": "string",
+  "role": "string",
+  "teamId": "UUID",
+  "aiEngineId": "UUID"
+}
+```
+
+```
+GET /colleagues/{id}
+
+Response:
+204 No Content
 ```
