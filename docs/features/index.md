@@ -26,7 +26,7 @@ import ReactPlayer from "react-player";
 </p>
 
 ## [Colleague (AI)](/docs/features/colleague)
-![Colleague Page](/media/profile.png)
+![Colleague Page](https://cdn.nucleoid.com/greycollar/media/5afbf454-97dc-45a9-bc4d-14fb69d6b1f9.png)
 
 Colleagues are AI assistants that help you with your tasks based on responsibilities and knowledge. They are designed to:
 
@@ -36,7 +36,7 @@ Colleagues are AI assistants that help you with your tasks based on responsibili
 
 ## [Knowledge](/docs/features/knowledge)
 
-![Knowledge Base](/media/knowledge-base.png)
+![Knowledge Base](https://cdn.nucleoid.com/greycollar/media/e10ddf80-499f-45da-9182-7284fcc21bf0.png)
 
 Knowledge is the information that the AI uses when working on responsibilities. It can be in the form of documents, FAQs, or any other.
 
@@ -44,14 +44,14 @@ Knowledge is the information that the AI uses when working on responsibilities. 
 
 ## [Responsibility and Task](/docs/features/responsibility)
 
-![Responsibility](/media/responsibility.png)
+![Responsibility](https://cdn.nucleoid.com/greycollar/media/d12714f4-e584-4020-92cb-62a25664e14d.png)
 
 Responsibility is a blueprint of the tasks that the AI will perform based on knowledge. It defines what the AI can do and how it can help you.
 
 > Tasks are the actions that the AI performs for a given responsibility with knowledge. Once the task is initiated through communication, the AI will execute the task and provide feedback to the supervisor.
 
 ## [Supervising (Human)](/docs/features/supervising)
-![Supervising](/media/supervising.png)
+![Supervising](https://cdn.nucleoid.com/greycollar/media/c09ef87d-7453-4a49-9b31-c56a0aaaa03f.png)
 
 Supervising by human is raised when the AI is not able to complete the task or needs human input. The supervisor can provide feedback, ask questions, or give additional information to help the AI complete the task.
 
@@ -59,7 +59,7 @@ Supervising by human is raised when the AI is not able to complete the task or n
 
 ## [Team](/docs/features/team)
 
-![Team](/media/team.png)
+![Team](https://cdn.nucleoid.com/greycollar/media/8046f722-d9c0-487f-89b2-a4e3aafc1874.png)
 
 Team is a logical grouping of AI colleagues. Mainly this grouping provides 2 major benefits:
 
@@ -68,7 +68,7 @@ Team is a logical grouping of AI colleagues. Mainly this grouping provides 2 maj
 
 ## [Communication](/docs/features/communication)
 
-![Communication](/media/communication.png)
+![Communication](https://cdn.nucleoid.com/greycollar/media/1f23108d-5f9d-4b20-8064-3679ee43289b.png)
 
 Communication is the primary way to interact with AI colleagues. It can occur through various channels, such as chat, email, or voice, depending on the context and user preferences. These communication channels are linked to specific responsibilities that AI colleagues are capable of handling, ensuring interactions are efficient and task-relevant. Multiple channels can be used simultaneously, allowing for flexibility in how users engage with AI colleagues.
 
@@ -76,7 +76,7 @@ Communication is the primary way to interact with AI colleagues. It can occur th
 
 ## [Integration](/docs/features/integration)
 
-![Integration](/media/integration.png)
+![Integration](https://cdn.nucleoid.com/greycollar/media/4a1ef3f7-172a-49ea-a782-ac170d335640.png)
 
 All integrations are based on MCP that allows you to connect to any third-party service. The integration can be used for bidirectional communication:
 
