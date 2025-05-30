@@ -14,14 +14,12 @@ import ReactPlayer from "react-player";
 
 <p align="center">
   <ReactPlayer
+    url={"https://cdn.nucleoid.com/media/618a935b-9b4b-406c-95b5-7223396b8bc4.mp4"}
     width={"100%"}
     height={"100%"}
     controls
-    playing={true}
     loop
-    url={
-      "https://cdn.nucleoid.com/media/618a935b-9b4b-406c-95b5-7223396b8bc4.mp4"
-    }
+    playing={true}
   />
 </p>
 

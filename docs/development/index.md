@@ -6,7 +6,7 @@ description: GreyCollar Development
 
 ## Supervised Agentic AI Platform
 
-![Supervised Agentic AI Platform](https://cdn.nucleoid.com/greycollar/media/52d1063c-bc59-44ef-ac7c-d246d7755db4.png)
+<img alt="Supervised Agentic AI Platform" src="https://cdn.nucleoid.com/greycollar/media/52d1063c-bc59-44ef-ac7c-d246d7755db4.png" width="500"/>
 
 Supervised Agentic AI Platform is a human-in-the-loop system that uses supervised learning to guide and continuously train AI agents to perform day-to-day tasks in the workplace.
 
@@ -18,7 +18,7 @@ Supervised Agentic AI Platform is a human-in-the-loop system that uses supervise
 
 MCP standardizes the way applications deliver relevant context to LLMs, facilitating smarter and more adaptable agents. The platform is built on top of the MCP layer, which is designed to be modular and extensible, allowing for easy integration with other applications and services.
 
-![MCP Layer](https://cdn.nucleoid.com/greycollar/media/2f5e212a-062c-421b-9c4c-ef14a309e251.png)
+<img alt="MCP Layer" src="https://cdn.nucleoid.com/greycollar/media/2f5e212a-062c-421b-9c4c-ef14a309e251.png" width="800"/>
 
 - **Modular and Extensible:** The MCP layer is designed to be modular and extensible, allowing for easy integration with other applications and services.
 - **Standardized Context Delivery:** The MCP layer standardizes the way applications deliver relevant context to LLMs, facilitating smarter and more adaptable agents.
@@ -36,7 +36,7 @@ GreyCollar adopts Event-Driven Architecture (EDA), which enables asynchronous co
 
 Reactive functions are part of reactive programming and work alongside the event layer to provide a reactive programming model. This allows for the creation of functions that respond to events and changes in the system.
 
-![Reactive Functions Layer](https://cdn.nucleoid.com/greycollar/media/60812487-52be-4c65-b011-4b713f9834bd.png)
+<img alt="Reactive Functions Layer" src="https://cdn.nucleoid.com/greycollar/media/60812487-52be-4c65-b011-4b713f9834bd.png" width="800"/>
 
 ### Communication Layer
 
