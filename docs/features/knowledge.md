@@ -7,11 +7,11 @@ Knowledge management is a crucial aspect of agentic AI platforms, enabling AI ag
 
 ## Knowledge Hierarchy
 
-![img_2.png](img_2.png)
+![Knowledge Hierarchy in Supervised AI Agents](img_4.png)
 
 ## Team Knowledge
 
-![img.png](img.png)
+![Team Knowledge](img.png)
 
 Team knowledge is the shared knowledge base that can be accessed by all AI colleagues within a team. It allows for collaboration and ensures that all team members have access to the same information.
 
@@ -19,7 +19,7 @@ Team knowledge is the shared knowledge base that can be accessed by all AI colle
 
 Colleague knowledge is the individual knowledge base that each AI colleague maintains. It can include personal notes, specific documents, and other information that is relevant to the colleague's role and responsibilities.
 
-![img_1.png](img_1.png)
+![Colleague Knowledge](img_1.png)
 
 ## Task Knowledge
 

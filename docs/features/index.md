@@ -7,8 +7,6 @@ collapsed: false
 
 # Features
 
-GreyCollar is a comprehensive platform that offers a wide range of features to support human-AI collaboration,
-streamline workflows, and enhance productivity. Explore the key features of GreyCollar below:
 
 import ReactPlayer from "react-player";
 
@@ -22,6 +20,9 @@ import ReactPlayer from "react-player";
     playing={true}
   />
 </p>
+
+GreyCollar is a comprehensive platform that offers a wide range of features to support human-AI collaboration,
+streamline workflows, and enhance productivity. Explore the key features of GreyCollar below:
 
 ## [Colleague (AI)](/docs/features/colleague)
 ![Colleague Page](https://cdn.nucleoid.com/greycollar/media/5afbf454-97dc-45a9-bc4d-14fb69d6b1f9.png)
@@ -49,6 +50,7 @@ Responsibility is a blueprint of the tasks that the AI will perform based on kno
 > Tasks are the actions that the AI performs for a given responsibility with knowledge. Once the task is initiated through communication, the AI will execute the task and provide feedback to the supervisor.
 
 ## [Supervising (Human)](/docs/features/supervising)
+
 ![Supervising](https://cdn.nucleoid.com/greycollar/media/c09ef87d-7453-4a49-9b31-c56a0aaaa03f.png)
 
 Supervising by human is raised when the AI is not able to complete the task or needs human input. The supervisor can provide feedback, ask questions, or give additional information to help the AI complete the task.
