@@ -21,10 +21,20 @@ import ReactPlayer from "react-player";
   />
 </p>
 
-GreyCollar is a comprehensive platform that offers a wide range of features to support human-AI collaboration,
-streamline workflows, and enhance productivity. Explore the key features of GreyCollar below:
+GreyCollar is a supervised AI platform designed to enhance human-AI collaboration by providing an environment for AI colleagues to continuously learn from human supervisors.
+
+Explore the key features of GreyCollar below:
+
+- [Colleague (AI)](#colleague-ai): AI assistants that handle tasks based on assigned responsibilities and knowledge.
+- [Supervising (Human)](#supervising-human): Humans who guide AI with feedback, questions, or extra info.
+- [Knowledge](#knowledge): The info AI uses—documents, FAQs, or other sources.
+- [Responsibility and Task](#responsibility-and-task): Defines what tasks the AI performs and how.
+- [Team](#team): A group of AI colleagues for managing knowledge and leadership.
+- [Communication](#communication): How you interact with AI—via chat, email, Slack, WhatsApp, etc.
+- [Integration](#integration): Connects to third-party tools via Model Context Protocol (MCP).
 
 ## [Colleague (AI)](/docs/features/colleague)
+
 ![Colleague Page](https://cdn.nucleoid.com/greycollar/media/5afbf454-97dc-45a9-bc4d-14fb69d6b1f9.png)
 
 Colleagues are AI assistants that help you with your tasks based on responsibilities and knowledge. They are designed to:
@@ -32,6 +42,14 @@ Colleagues are AI assistants that help you with your tasks based on responsibili
 - Complete tasks standalone for given responsibilities
 - Continuously learn and persist to knowledge base
 - Collaborate with other human supervisors or human colleagues
+
+## [Supervising (Human)](/docs/features/supervising)
+
+![Supervising](https://cdn.nucleoid.com/greycollar/media/c09ef87d-7453-4a49-9b31-c56a0aaaa03f.png)
+
+Supervising by human is raised when the AI is not able to complete the task or needs human input. The supervisor can provide feedback, ask questions, or give additional information to help the AI complete the task.
+
+> :warning: This is the core concept to eliminate hallucination that the AI evaluates knowledge existed before the execution of the task.
 
 ## [Knowledge](/docs/features/knowledge)
 
@@ -48,14 +66,6 @@ Knowledge is the information that the AI uses when working on responsibilities. 
 Responsibility is a blueprint of the tasks that the AI will perform based on knowledge. It defines what the AI can do and how it can help you.
 
 > Tasks are the actions that the AI performs for a given responsibility with knowledge. Once the task is initiated through communication, the AI will execute the task and provide feedback to the supervisor.
-
-## [Supervising (Human)](/docs/features/supervising)
-
-![Supervising](https://cdn.nucleoid.com/greycollar/media/c09ef87d-7453-4a49-9b31-c56a0aaaa03f.png)
-
-Supervising by human is raised when the AI is not able to complete the task or needs human input. The supervisor can provide feedback, ask questions, or give additional information to help the AI complete the task.
-
-> :warning: This is the core concept to eliminate hallucination that the AI evaluates knowledge existed before the execution of the task.
 
 ## [Team](/docs/features/team)
 
