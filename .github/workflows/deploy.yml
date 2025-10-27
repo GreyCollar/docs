@@ -30,6 +30,8 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: canmingir/greycollar-docs-live:latest
+          tags: |
+            canmingir/greycollar-docs-live:latest
+            canmingir/greycollar-docs-live:${{ github.run_id }}
           context: .
 
