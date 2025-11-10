@@ -2,36 +2,14 @@ name: Deploy
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+
 jobs:
-  build-and-push:
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
-    steps:
-      - name: Check Out Repo
-        uses: actions/checkout@v2
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: Log in to Docker Hub
-        env:
-          DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKER_ACCESS_TOKEN }}
-        uses: docker/login-action@v1
-        with:
-          username: canmingir
-          password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
-
-      - name: Build and Push Docker Image
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: |
-            canmingir/greycollar-docs-live:latest
-            canmingir/greycollar-docs-live:${{ github.run_id }}
-          context: .
-
+  greycollar_docs:
+    uses: GreyCollar/GreyCollar/.github/workflows/deploy.yml@main
+    with:
+      service_name: 'greycollar.docs'
+      environment: 'live'
+      install_dependencies: true
+      run_build: true
+    secrets: inherit
