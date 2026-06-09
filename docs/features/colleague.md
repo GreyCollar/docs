@@ -1,27 +1,25 @@
 ---
 sidebar_position: 1
-title: Colleague (AI)
+title: Agent (AI)
 ---
 
-![Colleague](https://cdn.nucleoid.com/greycollar/media/40538a45-0abc-452d-9772-b58efd3daf67.png)
+![Agent](https://cdn.nucleoid.com/greycollar/media/40538a45-0abc-452d-9772-b58efd3daf67.png)
 
-Colleague is an AI assistant that performs tasks based on its responsibilities and knowledge. Each Colleague is embodied with human-like characteristics.
+Agent is an AI assistant that performs tasks based on its blueprints and knowledge.
 
-- **Name**: The name of the colleague.
-- **Avatar**: The avatar of the colleague.
-- **Title**: The title of the colleague.
-- **Character**: The character of the colleague, which defines how the colleague interacts with users.
-- **Role**: The role of the colleague, which defines its position and guides how it completes tasks.
+- **Name**: The name of the agent.
+- **Icon**: The icon representing the agent.
+- **Description**: A description of the agent's purpose and behavior.
 
 ## AI Engine
 
 ![AI Engine](https://cdn.nucleoid.com/greycollar/media/f145d713-5b3c-46b0-9096-85e73f4de649.png)
 
-Each colleague can be run on different AI engines, which can be configured in the settings. So, even in the same team, different colleagues can use different AI engines.
+Each agent can be run on a different AI engine, which can be configured in the settings. Even within the same team, different agents can use different AI engines.
 
-> :warning: Even though colleagues share the same knowledge base, the platform manages embeddings for each AI engine, so that the AI engine can use the knowledge base effectively.
+> :warning: Even though agents share the same team knowledge base, the platform manages embeddings per AI engine so each agent can effectively utilize the knowledge base.
 
-# Colleague Wizard
+# Agent Wizard
 
 import ReactPlayer from "react-player";
 
@@ -36,4 +34,4 @@ import ReactPlayer from "react-player";
   />
 </p>
 
-The Colleague Wizard is a guided process to create a new colleague. It helps you set up the colleague's name, avatar, title, character, role, and AI engine.
+The Agent Wizard is a guided process to create a new agent. It helps you set up the agent's name, icon, description, and AI engine.

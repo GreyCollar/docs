@@ -50,38 +50,42 @@ Communication layer is the interface for agentic AI to interact with the outside
 ## Entities
 ![Entities](https://cdn.nucleoid.com/greycollar/media/93297a8d-6489-473b-a0d2-be909a10c1e1.png)
 
-### [Colleague (AI)](colleague)
+### [Agent (AI)](colleague)
 
-Colleague is the AI assistant that helps you with your tasks based on responsibilities and knowledge.
+Agent is the AI assistant that helps you with your tasks based on blueprints and knowledge.
 
 ### [Knowledge](knowledge)
 
 Knowledge is the information that the AI uses to assist you. It can be in the form of documents, FAQs, or any other relevant data.
 
-### [Responsibility](responsibility)
+### [Blueprint](responsibility)
 
-Responsibility is blueprint of the tasks that the AI can perform. It defines what the AI can do and how it can assist you.
+Blueprint defines the tasks that the AI agent can perform. It contains the flow of nodes and task execution logic.
 
-### [Integration](integration)
+### [MCP (Integration)](integration)
 
-Integrations are the connections between GreyCollar and other applications or services. They allow for seamless data exchange and functionality.
+MCP connections allow agents to access third-party tools and services via the Model Context Protocol.
 
 ### [Task/Step](task)
 
-Task is the action that the AI performs based on the knowledge and responsibility. It can be a simple task or a complex process.
+Task is the action that the AI performs based on its knowledge and blueprint. Steps are the individual execution units within a task.
 
 ### [Supervising (Human)](supervising)
 
-Supervising is the process of monitoring and managing the AI's actions. It ensures that the AI is performing tasks correctly and efficiently.
+Supervising is the human-in-the-loop process that ensures the AI performs tasks correctly and eliminates hallucinations.
 
 ### [Communication](communication)
 
-Communication is the interaction between the AI and the user. It can be in the form of messages, notifications, or any other means of communication.
+Communication links external messaging channels (Slack, WhatsApp, Email) to blueprints, enabling agents to receive tasks from the outside world.
 
-### [Team/TeamDetails](team)
+### [Team/TeamDetails](team-details)
 
-Team is the group of colleagues that work together to achieve a common goal. It can be a project team, department, or any other group of individuals.
+Team is the logical group that agents belong to. It manages shared knowledge and team-level settings.
 
 ### [Session/Conversation](session)
 
-Session is the interaction between the user and the AI. It can be a chat, email, or any other form of communication.
+Session is the interaction between a user and an agent. It can be a chat or email conversation.
+
+### [Step Score](step-score)
+
+Step Score tracks quality metrics for each step executed during a task, including hallucination scores and human feedback scores.

@@ -16,7 +16,8 @@ Team Details store specific information about a team, such as coach details.
 ## API
 
 ```
-GET /team/details/{id}
+GET /teams/details
+Description: Retrieves the current team's details (scoped to the authenticated session).
 
 Response:
 {
@@ -27,9 +28,9 @@ Response:
 ```
 
 ```
-PATCH /team/details/{id}
+PATCH /teams/details
+Description: Updates the current team's details.
 
-Request Body:
 {
   "coach": "STRING",
   "coachAvatar": "STRING"

@@ -1,82 +1,128 @@
 ---
 sidebar_position: 8
-title: Responsibility
+title: Blueprint
 ---
 
-Responsibility is the blueprint of the tasks that the AI can perform. It defines what the AI can do and how it can assist you.
+Blueprint defines the tasks that the AI agent can perform. It outlines what the AI can do, how it can assist you, and contains a flow of nodes representing the task execution logic.
 
-## Responsibility Model
+## Blueprint Model
 
-| Name        | Type   |
-| ----------- | ------ |
-| id          | UUID   |
-| title       | STRING |
-| description | STRING |
-| colleagueId | UUID   |
+| Name        | Type    |
+| ----------- | ------- |
+| id          | UUID    |
+| title       | STRING  |
+| description | STRING  |
+| agentId     | UUID    |
+| blocking    | BOOLEAN |
+| nodes       | JSONB   |
 
-## ResponsibilityNode Model
+## Node Schema
 
-| Name             | Type   |
-| ---------------- | ------ |
-| id               | UUID   |
-| type             | STRING |
-| properties       | STRING |
-| dependencyId     | UUID   |
-| responsibilityId | UUID   |
+Nodes are embedded in the blueprint as a JSONB array. Each node represents a step in the task execution flow.
+
+| Name       | Type   |
+| ---------- | ------ |
+| id         | UUID   |
+| type       | STRING |
+| properties | OBJECT |
 
 ## API
 
 ```
-POST /responsibilities
+GET /blueprints
 
-{
-  "name": "STRING",
-  "description": "STRING",
-  "colleagueId": "UUID",
-}
+Response:
+[
+  {
+    "id": "UUID",
+    "title": "STRING",
+    "description": "STRING",
+    "agentId": "UUID",
+    "blocking": true,
+    "nodes": [ ... ]
+  }
+]
+```
+
+```
+GET /blueprints/{id}
+Description: Retrieves a specific blueprint by its ID, including all associated nodes.
 
 Response:
 {
   "id": "UUID",
   "title": "STRING",
   "description": "STRING",
-  "colleagueId": "STRING"
-}
-```
-
-```
-GET /responsibilities
-
-Response:
-{
-  "id": "UUID",
-  "title": "STRING",
-  "description": "STRING",
-  "colleagueId": "STRING"
-}
-```
-
-```
-GET /responsibilities/{id}
-Description: Retrieves a specific responsibility by its ID, including all associated responsibility nodes.
-
-Response:
-{
-  "id": "UUID",
-  "title": "STRING",
-  "description": "STRING",
-  "colleagueId": "STRING",
-  "Nodes": [
+  "agentId": "UUID",
+  "blocking": true,
+  "nodes": [
     {
       "id": "UUID",
       "type": "STRING",
       "properties": {
-          "label": "STRING",
-          "icon": "STRING"
-      },
-      "dependencyId": "UUID",
-      "responsibilityId": "UUID"
+        "label": "STRING",
+        "icon": "STRING"
+      }
     }
   ]
+}
+```
+
+```
+PUT /blueprints/{blueprintId}
+Description: Creates or updates a blueprint (upsert). Publishes BLUEPRINT_CREATED event.
+
+{
+  "title": "STRING",
+  "description": "STRING",
+  "agentId": "UUID",
+  "nodes": [ ... ],
+  "messages": [
+    {
+      "content": "STRING",
+      "role": "STRING",
+      "createdAt": "DATETIME"
+    }
+  ],
+  "blocking": true,
+  "taskId": "UUID"
+}
+
+Response:
+{
+  "id": "UUID",
+  "title": "STRING",
+  "description": "STRING",
+  "agentId": "UUID",
+  "blocking": true,
+  "nodes": [ ... ]
+}
+```
+
+```
+PATCH /blueprints/{blueprintId}
+Description: Partially updates a blueprint (e.g., toggle blocking).
+
+{
+  "blocking": false
+}
+
+Response:
+{
+  "id": "UUID",
+  "blocking": false
+}
+```
+
+```
+DELETE /blueprints/{blueprintId}
+
+{
+  "agentId": "UUID"
+}
+
+Response:
+{
+  "message": "Blueprint deleted"
 }
 ```

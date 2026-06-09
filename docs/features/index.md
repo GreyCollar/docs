@@ -21,25 +21,26 @@ import ReactPlayer from "react-player";
   />
 </p>
 
-GreyCollar is a supervised AI platform designed to enhance human-AI collaboration by providing an environment for AI colleagues to continuously learn from human supervisors.
+GreyCollar is a supervised AI platform designed to enhance human-AI collaboration by providing an environment for AI agents to continuously learn from human supervisors.
 
 Explore the key features of GreyCollar below:
 
-- [Colleague (AI)](#colleague-ai): AI assistants that handle tasks based on assigned responsibilities and knowledge.
+- [Agent (AI)](#agent-ai): AI assistants that handle tasks based on assigned blueprints and knowledge.
 - [Supervising (Human)](#supervising-human): Humans who guide AI with feedback, questions, or extra info.
 - [Knowledge](#knowledge): The info AI uses—documents, FAQs, or other sources.
-- [Responsibility and Task](#responsibility-and-task): Defines what tasks the AI performs and how.
-- [Team](#team): A group of AI colleagues for managing knowledge and leadership.
+- [Blueprint](#blueprint): Defines what tasks the AI performs and how.
+- [Task and Step](#task-and-step): The execution of a blueprint — what the AI actually does, step by step.
+- [Team](#team): A group of AI agents for managing knowledge and leadership.
 - [Communication](#communication): How you interact with AI—via chat, email, Slack, WhatsApp, etc.
 - [Integration](#integration): Connects to third-party tools via Model Context Protocol (MCP).
 
-## [Colleague (AI)](/docs/features/colleague)
+## [Agent (AI)](/docs/features/colleague)
 
-![Colleague Page](https://cdn.nucleoid.com/greycollar/media/5afbf454-97dc-45a9-bc4d-14fb69d6b1f9.png)
+![Agent Page](https://cdn.nucleoid.com/greycollar/media/5afbf454-97dc-45a9-bc4d-14fb69d6b1f9.png)
 
-Colleagues are AI assistants that help you with your tasks based on responsibilities and knowledge. They are designed to:
+Agents are AI assistants that help you with your tasks based on blueprints and knowledge. They are designed to:
 
-- Complete tasks standalone for given responsibilities
+- Complete tasks standalone for given blueprints
 - Continuously learn and persist to knowledge base
 - Collaborate with other human supervisors or human colleagues
 
@@ -59,36 +60,44 @@ Knowledge is the information that the AI uses when working on responsibilities. 
 
 > Knowledge can be added manually or part of the supervising process during task execution.
 
-## [Responsibility and Task](/docs/features/responsibility)
+## [Blueprint](/docs/features/responsibility)
 
-![Responsibility](https://cdn.nucleoid.com/greycollar/media/d12714f4-e584-4020-92cb-62a25664e14d.png)
+![Blueprint](https://cdn.nucleoid.com/greycollar/media/d12714f4-e584-4020-92cb-62a25664e14d.png)
 
-Responsibility is a blueprint of the tasks that the AI will perform based on knowledge. It defines what the AI can do and how it can help you.
+Blueprint defines the structured execution plan that the AI will follow based on its knowledge. It outlines what the AI can do and how it can help you. Each blueprint contains a flow of nodes that represent the task logic.
 
-> Tasks are the actions that the AI performs for a given responsibility with knowledge. Once the task is initiated through communication, the AI will execute the task and provide feedback to the supervisor.
+> Blueprints can be set to **blocking** mode, which requires human approval before the agent proceeds with execution.
+
+## [Task and Step](/docs/features/task)
+
+![Task](https://cdn.nucleoid.com/greycollar/media/d12714f4-e584-4020-92cb-62a25664e14d.png)
+
+Task is the execution of a blueprint. Once a task is initiated through a communication channel, the agent breaks it down into steps and executes them autonomously. Each step is scored for quality metrics such as hallucination score and knowledge score.
+
+> When a step requires supervision (`SUPERVISED_NEEDED`), the task pauses and waits for human input before resuming.
 
 ## [Team](/docs/features/team)
 
 ![Team](https://cdn.nucleoid.com/greycollar/media/8046f722-d9c0-487f-89b2-a4e3aafc1874.png)
 
-Team is a logical grouping of AI colleagues. Mainly this grouping provides 2 major benefits:
+Team is a logical grouping of AI agents. This grouping provides 2 major benefits:
 
-- **Knowledge Management**: Knowledge can be shared between AI colleagues within the team, while each colleague can also maintain their own individual knowledge. In agentic AI, effective knowledge management is crucial to eliminate hallucinations, ensuring that each AI colleague has sufficient knowledge to complete tasks without being misled by irrelevant or unnecessary information. a
-- **Team Lead**: The team lead is the person responsible for handing off the task to the AI colleagues.
+- **Knowledge Management**: Knowledge can be shared between AI agents within the team, while each agent can also maintain its own individual knowledge. Effective knowledge management is crucial to eliminate hallucinations.
+- **Team Lead**: The team lead is the person responsible for handing off tasks to AI agents.
 
 ## [Communication](/docs/features/communication)
 
 ![Communication](https://cdn.nucleoid.com/greycollar/media/1f23108d-5f9d-4b20-8064-3679ee43289b.png)
 
-Communication is the primary way to interact with AI colleagues. It can occur through various channels, such as chat, email, or voice, depending on the context and user preferences. These communication channels are linked to specific responsibilities that AI colleagues are capable of handling, ensuring interactions are efficient and task-relevant. Multiple channels can be used simultaneously, allowing for flexibility in how users engage with AI colleagues.
+Communication is the primary way to interact with AI agents. It can occur through various channels such as chat, email, Slack, or WhatsApp. Communication channels are linked to specific blueprints that agents are capable of handling. Multiple channels can be used simultaneously.
 
-> In short, communication opens up AI colleagues to the outside world, enabling them to perform tasks.
+> In short, communication opens up AI agents to the outside world, enabling them to receive and perform tasks.
 
 ## [Integration](/docs/features/integration)
 
 ![Integration](https://cdn.nucleoid.com/greycollar/media/4a1ef3f7-172a-49ea-a782-ac170d335640.png)
 
-All integrations are based on MCP that allows you to connect to any third-party service. The integration can be used for bidirectional communication:
+All integrations are based on MCP (Model Context Protocol), which allows agents to connect to any third-party service. Integrations support bidirectional communication:
 
-- Incoming: Pulling data such as reading from Google Drive or checking Google Calendar 
-- Outgoing: Sending data such as writing to Google Drive or posting to a Slack channel
+- **Incoming**: Pulling data such as reading from Google Drive or checking Google Sheets
+- **Outgoing**: Sending data such as writing to Google Drive or posting to a Slack channel

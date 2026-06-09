@@ -13,13 +13,13 @@ Knowledge management is a crucial aspect of agentic AI platforms, enabling AI ag
 
 ![Team Knowledge](img.png)
 
-Team knowledge is the shared knowledge base that can be accessed by all AI colleagues within a team. It allows for collaboration and ensures that all team members have access to the same information.
+Team knowledge is the shared knowledge base that can be accessed by all AI agents within a team. It allows for collaboration and ensures that all agents have access to the same information.
 
-## Colleague Knowledge
+## Agent Knowledge
 
-Colleague knowledge is the individual knowledge base that each AI colleague maintains. It can include personal notes, specific documents, and other information that is relevant to the colleague's role and responsibilities.
+Agent knowledge is the individual knowledge base that each AI agent maintains. It can include personal notes, specific documents, and other information that is relevant to the agent's blueprints.
 
-![Colleague Knowledge](img_1.png)
+![Agent Knowledge](img_1.png)
 
 ## Task Knowledge
 
