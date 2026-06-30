@@ -5,133 +5,141 @@ description: Event API
 
 # Event API
 
-## Supervising
+GreyCollar uses an event-driven architecture. Events are published and subscribed to asynchronously across the platform.
 
-**SUPERVISING.RAISED** is triggered when a colleague raises a question to a supervisor.
+## Subscribed Events
 
-```ts
-{
-  sessionId: string;
-  conversationId: string;
-  question: string;
-  colleagueId: string;
-}
-```
+These events are consumed by the API to trigger agent actions.
 
-SUPERVISING.ANSWERED is triggered when a supervisor answers a question.
+### MESSAGE_USER_MESSAGED
+
+Triggered when a user sends a message to the team chat.
 
 ```ts
 {
   teamId: string;
-  supervisingId: string;
+  content: string;
+}
+```
+
+### SESSION_USER_MESSAGED
+
+Triggered when a user sends a message in a session.
+
+```ts
+{
+  agentId: string;
   sessionId: string;
-  conversationId: string;
-  colleagueId: string;
+  content: string;
+}
+```
+
+### SUPERVISING_ANSWERED
+
+Triggered when a supervisor provides an answer. Resumes the agent's chat flow.
+
+```ts
+{
+  sessionId: string;
+  agentId: string;
+  question: string;
+}
+```
+
+### TASK_CREATED
+
+Triggered when a new task is created. Starts the agent task execution flow.
+
+```ts
+{
+  taskId: string;
+}
+```
+
+### STEP_ADDED
+
+Triggered when a step is added to a task. Executes the step action.
+
+```ts
+{
+  stepId: string;
+  action: string;
+  parameters: object;
+  comment: string;
+  resultScore?: number;
+}
+```
+
+### TASK_SUPERVISING_RESPONDED
+
+Triggered when a supervisor responds to a task supervising request. Resumes the next pending supervised step.
+
+```ts
+{
+  taskId: string;
+  blueprintId?: string;
+}
+```
+
+### STEP_COMPLETED
+
+Triggered when a step completes. Continues the task execution.
+
+```ts
+{
+  taskId: string;
+}
+```
+
+### STEP_FAILED
+
+Triggered when a step fails. Handles task failure logic.
+
+```ts
+{
+  taskId: string;
+  result: string;
+}
+```
+
+---
+
+## Published Events
+
+These events are emitted by the platform for consumers to act on.
+
+### BLUEPRINT_CREATED
+
+Published when a blueprint is created or updated.
+
+```ts
+{
+  Blueprint: object;
+}
+```
+
+### SUPERVISING_LOADED
+
+Published when a supervising record is retrieved via GET /supervisings.
+
+```ts
+{
+  id: string;
+  agentId: string;
   question: string;
   answer: string;
-  status: "ANSWERED";
+  status: "IN_PROGRESS" | "ANSWERED";
+  createdAt: string;
 }
 ```
 
-## Session
+### ERROR_OCCURRED
 
-**SESSION.INITIATED** is triggered when a session is initiated.
+Published when an error occurs during session chat processing.
 
 ```ts
 {
   sessionId: string;
-  colleagueId: string;
-  type: "CHAT" | "EMAIL";
-}
-```
-
-**SESSION.USER_MESSAGED** is triggered when a user sends a message.
-
-```ts
-{
-  colleagueId: string;
-  sessionId: string;
-  conversationId: string;
-  content: string;
-}
-```
-
-
-**SESSION.AI_MESSAGED** is triggered when the AI sends a message.
-
-```ts
-{
-  colleagueId: string;
-  sessionId: string;
-  conversationId: string;
-  content: string;
-}
-```
-
-## Task
-
-TASK.CREATED is triggered when a task is created.
-
-```ts
-{
-  taskId: string;
-  colleagueId: string;
-  description: string;
-}
-```
-
-TASK.COMPLETED is triggered when a task is completed.
-
-```ts
-{
-  taskId: string;
-  result: string;
-  comment: string;
-}
-```
-
-STEP.ADDED is triggered when a step is added to a task.
-
-```ts
-{
-  taskId: string;
-  stepId: string;
-  action: string;
-  parameters: string;
-  comment: string;
-}
-```
-
-STEP.COMPLETED is triggered when a step is completed.
-
-```ts
-{
-  taskId: string;
-  stepId: string;
-  action: string;
-  parameters: string;
-  result: string;
-}
-```
-
-## Message (Team Chat)
-
-MESSAGE.CREATED is triggered when a message is created.
-
-```ts
-{
-  messageId: string;
-  colleagueId: string;
-  content: string;
-}
-```
-
-MESSAGE.ASSISTANT_MESSAGED is triggered when the assistant sends a message.
-
-```ts
-{
-  messageId: string;
-  colleagueId: string;
-  content: string;
+  message: string;
 }
 ```

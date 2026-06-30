@@ -3,16 +3,18 @@ sidebar_position: 10
 title: Communication
 ---
 
-Communication is the connection between GreyCollar and external applications or services for messaging. It allows for seamless data exchange and functionality.
+Communication links external messaging channels to blueprints, enabling agents to receive and process messages from outside the platform.
 
 ## Model
 
-| Name             | Type   |
-| ---------------- | ------ |
-| id               | UUID   |
-| channelType      | STRING |
-| channelCode      | STRING |
-| responsibilityId | UUID   |
+| Name        | Type   |
+| ----------- | ------ |
+| id          | UUID   |
+| channelType | STRING |
+| channelCode | STRING |
+| blueprintId | UUID   |
+
+Channel type values: `WHATSAPP` | `SLACK` | `EMAIL`
 
 ## API
 
@@ -21,8 +23,8 @@ POST /communications
 
 {
   "channelCode": "string",
-  "channelType": "string",
-  "responsibilityId": "UUID",
+  "channelType": "SLACK",
+  "blueprintId": "UUID"
 }
 
 Response:
@@ -30,7 +32,7 @@ Response:
   "id": "UUID",
   "channelCode": "string",
   "channelType": "string",
-  "responsibilityId": "UUID",
+  "blueprintId": "UUID"
 }
 ```
 
@@ -38,12 +40,25 @@ Response:
 GET /communications
 
 Response:
-{
+[
+  {
+    "id": "UUID",
+    "channelCode": "string",
+    "channelType": "string",
+    "blueprintId": "UUID"
+  }
+]
+```
 
+```
+GET /communications/{id}
+
+Response:
+{
   "id": "UUID",
   "channelCode": "string",
   "channelType": "string",
-  "responsibilityId": "UUID",
+  "blueprintId": "UUID"
 }
 ```
 

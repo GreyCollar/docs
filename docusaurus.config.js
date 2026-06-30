@@ -39,8 +39,7 @@ const config = {
         },
         blog: {
           showReadingTime: true,
-          editUrl:
-            'https://github.com/greycollar/docs/tree/main',
+          editUrl: "https://github.com/greycollar/docs/tree/main",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -67,16 +66,16 @@ const config = {
             label: "BLOG",
             position: "left",
           },
-          {
-            href: "https://land.greycollar.ai",
-            html: require("fs").readFileSync("./ide.html", "utf8"),
-            position: "right",
-          },
-          {
-            href: "https://github.com/GreyCollar/GreyCollar",
-            html: require("fs").readFileSync("./github.html", "utf8"),
-            position: "right",
-          },
+          // {
+          //   href: "https://land.greycollar.ai",
+          //   html: require("fs").readFileSync("./ide.html", "utf8"),
+          //   position: "right",
+          // },
+          // {
+          //   href: "https://github.com/GreyCollar/GreyCollar",
+          //   html: require("fs").readFileSync("./github.html", "utf8"),
+          //   position: "right",
+          // },
         ],
       },
       prism: {
