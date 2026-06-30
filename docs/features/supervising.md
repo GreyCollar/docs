@@ -3,7 +3,7 @@ sidebar_position: 5
 title: Supervising
 ---
 
-![Supervising](https://cdn.nucleoid.com/greycollar/media/c09ef87d-7453-4a49-9b31-c56a0aaaa03f.png)
+![Supervising](supervising.png)
 
 GreyCollar platform solves LLMs hallucination problem by introducing a human-in-the-loop approach. The platform predicts chances of hallucination based on the task and knowledge, and if the chance is high, it raises a supervising task. It allows human supervisors to oversee AI tasks, provide feedback, and ensure that the AI is working correctly. This approach helps to eliminate hallucinations and ensures that the AI is working as intended.
 
@@ -36,4 +36,3 @@ The supervisor updates the blueprint that the task is running against. This is t
 - **All future tasks** created with that blueprint will also benefit from the change
 
 This method is preferred when the supervising reveals a structural gap in the blueprint — not just a one-off question, but something that should be fixed for every future execution.
-

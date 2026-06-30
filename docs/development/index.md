@@ -48,9 +48,10 @@ Communication layer is the interface for agentic AI to interact with the outside
 ---
 
 ## Entities
+
 ![Entities](https://cdn.nucleoid.com/greycollar/media/93297a8d-6489-473b-a0d2-be909a10c1e1.png)
 
-### [Agent (AI)](colleague)
+### [Agent (AI)](agent)
 
 Agent is the AI assistant that helps you with your tasks based on blueprints and knowledge.
 
@@ -58,7 +59,7 @@ Agent is the AI assistant that helps you with your tasks based on blueprints and
 
 Knowledge is the information that the AI uses to assist you. It can be in the form of documents, FAQs, or any other relevant data.
 
-### [Blueprint](responsibility)
+### [Blueprint](blueprint)
 
 Blueprint defines the tasks that the AI agent can perform. It contains the flow of nodes and task execution logic.
 

@@ -3,7 +3,7 @@ sidebar_position: 4
 title: Task and Step
 ---
 
-![Task](https://cdn.nucleoid.com/greycollar/media/d12714f4-e584-4020-92cb-62a25664e14d.png)
+![Task](task.png)
 
 Tasks are the actions that AI agents perform based on their blueprints and knowledge. Once a task is initiated through a communication channel, the agent breaks it down into individual steps and executes them autonomously.
 
@@ -21,14 +21,14 @@ Each task is broken down into steps. A step represents a single action the agent
 
 ### Step Statuses
 
-| Status            | Description                                              |
-| ----------------- | -------------------------------------------------------- |
-| IN_PROGRESS       | The step is being executed.                              |
-| COMPLETED         | The step finished successfully.                          |
-| FAILED            | The step encountered an error.                           |
-| SUPERVISED_NEEDED | The agent paused and is waiting for human supervision.   |
-| WAITING_FOR_USER  | The agent is waiting for a user response.                |
-| LOW_CONFIDENCE    | The agent completed the step but with low confidence.    |
+| Status            | Description                                            |
+| ----------------- | ------------------------------------------------------ |
+| IN_PROGRESS       | The step is being executed.                            |
+| COMPLETED         | The step finished successfully.                        |
+| FAILED            | The step encountered an error.                         |
+| SUPERVISED_NEEDED | The agent paused and is waiting for human supervision. |
+| WAITING_FOR_USER  | The agent is waiting for a user response.              |
+| LOW_CONFIDENCE    | The agent completed the step but with low confidence.  |
 
 ## Step Scores
 
@@ -46,6 +46,6 @@ These scores are used to measure agent performance over time and identify areas 
 When a step reaches `SUPERVISED_NEEDED`, the task pauses and waits for a supervisor. There are two ways to respond:
 
 - **Chat Response** — The supervisor answers the question directly. The task resumes immediately. The answer can optionally be saved to the knowledge base.
-- **Blueprint Modification** — The supervisor updates the blueprint the task is running against. The current task resumes from where it paused *and* all future tasks created with that blueprint will use the updated logic.
+- **Blueprint Modification** — The supervisor updates the blueprint the task is running against. The current task resumes from where it paused _and_ all future tasks created with that blueprint will use the updated logic.
 
 > See [Supervising](/docs/features/supervising) for a detailed explanation of both methods.

@@ -7,12 +7,11 @@ collapsed: false
 
 # Features
 
-
 import ReactPlayer from "react-player";
 
 <p align="center">
   <ReactPlayer
-    url={"https://cdn.nucleoid.com/media/618a935b-9b4b-406c-95b5-7223396b8bc4.mp4"}
+    url={"https://cdn.nucleoid.com/media/e3ae7a99-3824-4720-8c80-121af255ee01.mp4"}
     width={"100%"}
     height={"100%"}
     controls
@@ -34,9 +33,9 @@ Explore the key features of GreyCollar below:
 - [Communication](#communication): How you interact with AI—via chat, email, Slack, WhatsApp, etc.
 - [Integration](#integration): Connects to third-party tools via Model Context Protocol (MCP).
 
-## [Agent (AI)](/docs/features/colleague)
+## [Agent (AI)](/docs/features/agent)
 
-![Agent Page](https://cdn.nucleoid.com/greycollar/media/5afbf454-97dc-45a9-bc4d-14fb69d6b1f9.png)
+![Agent Page](agent.png)
 
 Agents are AI assistants that help you with your tasks based on blueprints and knowledge. They are designed to:
 
@@ -46,7 +45,7 @@ Agents are AI assistants that help you with your tasks based on blueprints and k
 
 ## [Supervising (Human)](/docs/features/supervising)
 
-![Supervising](https://cdn.nucleoid.com/greycollar/media/c09ef87d-7453-4a49-9b31-c56a0aaaa03f.png)
+![Supervising](supervising.png)
 
 Supervising by human is raised when the AI is not able to complete the task or needs human input. The supervisor can provide feedback, ask questions, or give additional information to help the AI complete the task.
 
@@ -54,15 +53,15 @@ Supervising by human is raised when the AI is not able to complete the task or n
 
 ## [Knowledge](/docs/features/knowledge)
 
-![Knowledge Base](https://cdn.nucleoid.com/greycollar/media/e10ddf80-499f-45da-9182-7284fcc21bf0.png)
+![Knowledge Base](knowledge.png)
 
 Knowledge is the information that the AI uses when working on responsibilities. It can be in the form of documents, FAQs, or any other.
 
 > Knowledge can be added manually or part of the supervising process during task execution.
 
-## [Blueprint](/docs/features/responsibility)
+## [Blueprint](/docs/features/blueprint)
 
-![Blueprint](https://cdn.nucleoid.com/greycollar/media/d12714f4-e584-4020-92cb-62a25664e14d.png)
+![Blueprint](blueprint.png)
 
 Blueprint defines the structured execution plan that the AI will follow based on its knowledge. It outlines what the AI can do and how it can help you. Each blueprint contains a flow of nodes that represent the task logic.
 
@@ -70,7 +69,7 @@ Blueprint defines the structured execution plan that the AI will follow based on
 
 ## [Task and Step](/docs/features/task)
 
-![Task](https://cdn.nucleoid.com/greycollar/media/d12714f4-e584-4020-92cb-62a25664e14d.png)
+![Task](task.png)
 
 Task is the execution of a blueprint. Once a task is initiated through a communication channel, the agent breaks it down into steps and executes them autonomously. Each step is scored for quality metrics such as hallucination score and knowledge score.
 
@@ -78,7 +77,7 @@ Task is the execution of a blueprint. Once a task is initiated through a communi
 
 ## [Team](/docs/features/team)
 
-![Team](https://cdn.nucleoid.com/greycollar/media/8046f722-d9c0-487f-89b2-a4e3aafc1874.png)
+![Team](team.png)
 
 Team is a logical grouping of AI agents. This grouping provides 2 major benefits:
 
@@ -87,7 +86,7 @@ Team is a logical grouping of AI agents. This grouping provides 2 major benefits
 
 ## [Communication](/docs/features/communication)
 
-![Communication](https://cdn.nucleoid.com/greycollar/media/1f23108d-5f9d-4b20-8064-3679ee43289b.png)
+![Communication](communication.png)
 
 Communication is the primary way to interact with AI agents. It can occur through various channels such as chat, email, Slack, or WhatsApp. Communication channels are linked to specific blueprints that agents are capable of handling. Multiple channels can be used simultaneously.
 
@@ -95,7 +94,7 @@ Communication is the primary way to interact with AI agents. It can occur throug
 
 ## [Integration](/docs/features/integration)
 
-![Integration](https://cdn.nucleoid.com/greycollar/media/4a1ef3f7-172a-49ea-a782-ac170d335640.png)
+![Integration](integration.png)
 
 All integrations are based on MCP (Model Context Protocol), which allows agents to connect to any third-party service. Integrations support bidirectional communication:
 
