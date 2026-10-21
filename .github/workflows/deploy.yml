@@ -6,7 +6,7 @@ on:
 
 jobs:
   greycollar_docs:
-    uses: GreyCollar/GreyCollar/.github/workflows/deploy.yml@main
+    uses: canmingir/actions/.github/workflows/deploy.yml@main
     with:
       service_name: 'greycollar.docs'
       environment: 'live'
