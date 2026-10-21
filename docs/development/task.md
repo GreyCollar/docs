@@ -3,9 +3,9 @@ sidebar_position: 7
 title: Task
 ---
 
-Task is the action that the AI performs based on the knowledge and responsibility. It can be a simple task or a complex process.
+Task is the action that the AI performs based on its knowledge and blueprint. It can be a simple task or a complex process involving multiple steps.
 
-## Model
+## Task Model
 
 | Name        | Type   |
 | ----------- | ------ |
@@ -15,7 +15,27 @@ Task is the action that the AI performs based on the knowledge and responsibilit
 | comment     | string |
 | createdAt   | date   |
 | status      | string |
-| colleagueId | UUID   |
+| agentId     | UUID   |
+| blueprintId | UUID   |
+| sessionId   | UUID   |
+
+Status values: `IN_PROGRESS` | `COMPLETED` | `FAILED`
+
+## Step Model
+
+| Name           | Type   |
+| -------------- | ------ |
+| id             | UUID   |
+| action         | string |
+| parameters     | JSON   |
+| result         | BLOB   |
+| comment        | string |
+| status         | string |
+| taskId         | UUID   |
+| knowledgeScore | FLOAT  |
+| createdAt      | date   |
+
+Status values: `IN_PROGRESS` | `SUPERVISED_NEEDED` | `COMPLETED` | `FAILED` | `WAITING_FOR_USER` | `LOW_CONFIDENCE`
 
 ## API
 
@@ -23,83 +43,104 @@ Task is the action that the AI performs based on the knowledge and responsibilit
 POST /tasks
 
 {
-  "colleagueId": "UUID",
-  "description": "string"
+  "agentId": "UUID",
+  "description": "string",
+  "sessionId": "UUID",
+  "blueprintId": "UUID"
 }
 
 Response:
 {
   "id": "UUID",
-  "colleagueId": "UUID",
+  "agentId": "UUID",
   "description": "string",
-  "status": "string",
-  "createdAt": "date",
+  "status": "IN_PROGRESS",
+  "blueprintId": "UUID",
+  "sessionId": "UUID",
+  "createdAt": "date"
 }
 ```
 
 ```
-GET /tasks?colleagueId={colleagueId}
+GET /tasks?agentId={agentId}
+
+Response:
+[
+  {
+    "id": "UUID",
+    "agentId": "UUID",
+    "description": "string",
+    "status": "string",
+    "result": "string",
+    "comment": "string",
+    "blueprintId": "UUID",
+    "sessionId": "UUID",
+    "createdAt": "date"
+  }
+]
+```
+
+```
+GET /tasks/{taskId}
 
 Response:
 {
   "id": "UUID",
-  "colleagueId": "UUID",
   "description": "string",
-  "status": "string",
   "result": "string",
-  "comment": "string"
+  "comment": "string",
   "createdAt": "date",
+  "status": "string",
+  "agentId": "UUID",
+  "blueprintId": "UUID",
+  "sessionId": "UUID",
+  "Agent": {
+    "teamId": "UUID"
+  }
 }
 ```
 
 ```
-GET /tasks/{id}
+GET /tasks/{taskId}/steps
 
 Response:
-{
-"id": "UUID",
-"description": "string",
-"result": "string",
-"comment": "string"
-"createdAt": "date",
-"status": "string",
-"colleagueId": "UUID",
-"Colleague": {
-"teamId": "UUID"
-}
-}
-
+[
+  {
+    "id": "UUID",
+    "action": "string",
+    "parameters": { ... },
+    "result": "string",
+    "comment": "string",
+    "status": "string",
+    "taskId": "UUID",
+    "knowledgeScore": 0.95,
+    "createdAt": "date"
+  }
+]
 ```
 
 ```
-GET /tasks/{id}/steps
-
-Response:
-{
-"id": "UUID",
-"action: "string",
-"parameters": {
-"message": "string"
-},
-"result": "string",
-"comment": "string"
-"status": "string",
-"taskId": "UUID"
-"createdAt": "date",
-}
-
-```
-
-```
-GET /tasks/{id}/supervising
+PATCH /tasks/{taskId}/steps/{stepId}
+Description: Updates a step's comment.
 
 {
-"text": "string",
-"colleagueId": "UUID",
-"addToKnowledgeBase": "boolean"
+  "comment": "string"
 }
 
 Response:
-201 created
+200 OK
+```
 
+```
+POST /tasks/{taskId}/supervising
+Description: Adds a supervised step to a task. Optionally saves the response to the knowledge base.
+
+{
+  "text": "string",
+  "agentId": "UUID",
+  "addToKnowledgeBase": true
+}
+
+Response:
+201 Created
 ```

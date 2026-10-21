@@ -1,62 +1,69 @@
 ---
 sidebar_position: 9
-title: Integration (Endpoint)
+title: MCP (Integration)
 ---
 
-Integration is the connection between GreyCollar and external applications or services. It allows for seamless data exchange and functionality.
+MCP (Model Context Protocol) is the connection between GreyCollar and external applications or services. It standardizes how agents access third-party tools and data sources. MCPs can be scoped to a specific agent or an entire team.
 
 ## Model
 
-| Name         | Type |
-| ------------ | ---- |
-| id           | UUID |
-| mcpId        | UUID |
-| refreshToken | UUID |
-| colleagueId  | UUID |
-| teamId       | UUID |
+| Name         | Type   |
+| ------------ | ------ |
+| id           | UUID   |
+| mcpId        | UUID   |
+| refreshToken | STRING |
+| agentId      | UUID   |
+| teamId       | UUID   |
 
 ## API
 
 ```
-POST /integrations
+POST /mcps
+Description: Connects an MCP integration using an OAuth authorization code.
 
 {
-  "authorizationCode": "UUID",
+  "authorizationCode": "string",
   "mcpId": "UUID",
-  "colleagueId": "UUID",
+  "agentId": "UUID"
 }
 
 Response:
 {
-  "id": "UUID",
-  "mcpId": "UUID",
-  "colleagueId": "UUID",
-  "authorizationCode": "UUID",
-  "refreshToken": "UUID"
+  "tokens": { ... }
 }
 ```
 
 ```
-GET /integrations
+GET /mcps?agentId={agentId}
+GET /mcps?teamId={teamId}
+Description: Lists connected MCPs for a specific agent or team.
 
 Response:
-{
-  "id": "UUID",
-  "provider": "string",
-  "description": "string",
-  "action": "string",
-  "direction": "string",
-  "oauth": {
-    "scope": "string",
-    "tokenUrl": "string",
-    "authUrl": "string",
-    "clientScript": "string"
+[
+  {
+    "id": "UUID",
+    "mcpId": "UUID",
+    "agentId": "UUID",
+    "teamId": "UUID"
   }
-}
+]
 ```
 
 ```
-DELETE /integrations/{id}
+GET /mcps/actions
+Description: Lists all available MCP actions registered in the system.
+
+Response:
+[
+  {
+    "name": "string",
+    "description": "string"
+  }
+]
+```
+
+```
+DELETE /mcps/{id}
 
 Response:
 204 No Content

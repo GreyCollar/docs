@@ -3,7 +3,7 @@ sidebar_position: 6
 title: Message
 ---
 
-Message is the unit of communication between colleagues and AI, representing the content exchanged in chat sessions.
+Message is the unit of communication in team chat, representing the content exchanged between users and agents in the team workspace.
 
 ## Model
 
@@ -11,15 +11,19 @@ Message is the unit of communication between colleagues and AI, representing the
 | ----------- | ------ |
 | id          | UUID   |
 | role        | string |
-| userId      | UUID   |
+| agentId     | UUID   |
+| userId      | string |
 | command     | string |
 | knowledgeId | UUID   |
 | status      | string |
-| colleagueId | UUID   |
 | teamId      | UUID   |
 | replyTo     | UUID   |
 | content     | string |
 | createdAt   | date   |
+
+Role values: `SYSTEM` | `USER` | `ASSISTANT`
+
+Status values: `RECEIVED` | `READ`
 
 ## API
 
@@ -27,70 +31,63 @@ Message is the unit of communication between colleagues and AI, representing the
 POST /messages
 
 {
+  "role": "USER",
+  "agentId": "UUID",
+  "content": "string",
+  "userId": "string",
+  "command": "string",
+  "knowledgeId": "UUID",
+  "replyTo": "UUID"
+}
+
+Response:
+{
+  "id": "UUID",
+  "role": "string",
+  "agentId": "UUID",
+  "content": "string",
+  "userId": "string",
+  "command": "string",
+  "knowledgeId": "UUID",
+  "teamId": "UUID",
+  "replyTo": "UUID",
+  "status": "string",
+  "createdAt": "date"
+}
+```
+
+```
+GET /messages?offset={date}
+
+Query Parameters:
+  offset: date (optional) — returns messages created after this date
+
+Response:
+[
+  {
+    "id": "UUID",
     "role": "string",
-    "colleagueId": "UUID",
+    "agentId": "UUID",
     "content": "string",
-    "userId": "UUID",
+    "userId": "string",
     "command": "string",
     "knowledgeId": "UUID",
     "teamId": "UUID",
     "replyTo": "UUID",
+    "status": "string",
+    "createdAt": "date"
+  }
+]
+```
+
+```
+PATCH /messages?offset={date}
+Description: Marks USER messages created after the offset date as a given status.
+
+{
+  "status": "READ"
 }
 
 Response:
-{
-  "id": "UUID",
-  "role": "string",
-  "colleagueId": "UUID",
-  "content": "string",
-  "userId": "UUID",
-  "command": "string",
-  "knowledgeId": "UUID",
-  "teamId": "UUID",
-  "replyTo": "UUID",
-  "status": "string",
-  "createdAt": "date"
-}
-```
-
-```
-GET /messages
-
-Response:
-{
-  "id": "UUID",
-  "role": "string",
-  "colleagueId": "UUID",
-  "content": "string",
-  "userId": "UUID",
-  "command": "string",
-  "knowledgeId": "UUID",
-  "teamId": "UUID",
-  "replyTo": "UUID",
-  "status": "string",
-  "createdAt": "date"
-}
-```
-
-```
-PATCH /messages
-
-{
-  "status": "string"
-}
-
-Response:
-{
-  "id": "UUID",
-  "role": "string",
-  "colleagueId": "UUID",
-  "content": "string",
-  "userId": "UUID",
-  "command": "string",
-  "knowledgeId": "UUID",
-  "teamId": "UUID",
-  "replyTo": "UUID",
-  "status": "string",
-  "createdAt": "date"
-}
+200 OK
 ```

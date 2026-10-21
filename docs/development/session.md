@@ -3,17 +3,19 @@ sidebar_position: 12
 title: Session
 ---
 
-Session represents a period of interaction or a specific context, typically involving a colleague and a series of communications (conversations).
+Session represents a period of interaction or a specific context, typically involving an agent and a series of communications (conversations).
 
 ## Models
 
 ### Session Model
 
-| Name        | Type   |
-| ----------- | ------ |
-| id          | UUID   |
-| type        | STRING |
-| colleagueId | UUID   |
+| Name    | Type   |
+| ------- | ------ |
+| id      | UUID   |
+| type    | STRING |
+| agentId | UUID   |
+
+Type values: `CHAT` | `EMAIL`
 
 ### Conversation Model
 
@@ -25,32 +27,31 @@ Session represents a period of interaction or a specific context, typically invo
 | sessionId | UUID     |
 | createdAt | DATETIME |
 
+Role values: `USER` | `ASSISTANT`
+
 ## API
 
 ```
 POST /sessions
 Description: Creates a new session.
 
-Request:
 {
-  "type": "STRING",
-  "colleagueId": "UUID"
+  "type": "CHAT",
+  "agentId": "UUID"
 }
 
 Response:
 {
   "id": "UUID",
-  "type": "STRING",
-  "colleagueId": "UUID",
+  "type": "CHAT",
+  "agentId": "UUID"
 }
-
 ```
 
 ```
 POST /sessions/{sessionId}
-Description: Adds a conversation (message) to an existing session.
+Description: Adds a user message to an existing session. Triggers SESSION_USER_MESSAGED event.
 
-Request Body:
 {
   "content": "STRING"
 }
@@ -59,11 +60,10 @@ Response:
 {
   "id": "UUID",
   "sessionId": "UUID",
-  "role": "STRING",
+  "role": "USER",
   "content": "TEXT",
-  "createdAt": "DATETIME",
+  "createdAt": "DATETIME"
 }
-
 ```
 
 ```
@@ -71,13 +71,13 @@ GET /sessions/{id}
 Description: Retrieves all conversations for a specific session, ordered by creation date.
 
 Response:
-
+[
   {
     "id": "UUID",
     "sessionId": "UUID",
-    "role": "STRING",
+    "role": "USER" | "ASSISTANT",
     "content": "TEXT",
-    "createdAt": "DATETIME",
+    "createdAt": "DATETIME"
   }
-
+]
 ```
